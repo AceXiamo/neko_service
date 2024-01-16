@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  security:
+    user:
+      name: xiamo
+      password: 147526
+
+logging:
+  level:
+    org.springframework: warn
+    com.xiamo: debug
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+
