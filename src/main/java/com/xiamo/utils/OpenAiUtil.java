@@ -49,7 +49,7 @@ public class OpenAiUtil {
                 .execute()
                 .body();
         OpenAiResponse response = JSON.parseObject(body, OpenAiResponse.class);
-        if (response != null && response.getChoices() != null && response.getChoices().size() > 0) {
+        if (response != null && response.getChoices() != null && !response.getChoices().isEmpty()) {
             return response.getChoices().get(0).getMessage();
         }
         return null;
